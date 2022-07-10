@@ -1,0 +1,38 @@
+import pandas as pd
+verdade = True
+ref_arquivo = open("notas_alunos.csv", "r")
+open("alunos_situacao.csv", "w") 
+media = 0
+notaUm = 0
+notaDois = 0
+#
+while verdade:
+	df = pd.read_csv("notas_alunos.csv", usecols = ["aluno", "nota_1", "nota_2", "faltas"])
+	notaUm = df["nota_1"]
+	notaDois = df["nota_2"]            
+	media = (notaUm + notaDois) / 2
+	totAlunos += 1
+	mediaGeral = mediaGeral + media
+	faltasMaior = df[faltas].max()
+#
+# verifica reprovacao por faltas (>5) e media < 7
+#
+	if faltas > 5 or media < 7:
+		situacao = "REPROVADO"
+	else:
+		situacao = "APOVADO"
+#
+# Grava novo arquivo csv com colunas media e situacao
+#
+df.to.csv("alunos_situacao.csv", columns = ["aluno", "nota1", "nota2", "faltas", "media", "situacao"])
+#
+# Fim da leitura do arquivo csv
+#
+ref_arquivo.close 
+verdade = False
+#
+close()
+#
+print(" O maior número de faltas foi: ", faltasMaior, " faltas ", "\n")
+print(" A media geral das notas dos alunos foi: ", mediaGeral/totAlunos, "\n")
+print(" A mator média foi: ", mediaMaior, "\n")
