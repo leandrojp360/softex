@@ -1,0 +1,23 @@
+class Pessoa():
+    def __init__(self, nome, sexo):
+        self.__nome = nome
+        self.__sexo = sexo
+   
+    def nomeGet(self):
+        return self.__nome
+
+    def nomeSet(self, nome):
+        self.__nome = nome
+
+    def sexoGet(self):
+        return self.__sexo
+
+    def sexoSet(self, sexo):
+        self.__sexo = sexo
+
+if __name__ == "__main__":
+    pessoa1 = Pessoa("Jose", "M")
+    print(pessoa1.nome)
+else:
+    pessoa2 = Pessoa("Maria", "F")
+    print(pessoa2.nome)
