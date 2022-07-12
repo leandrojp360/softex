@@ -14,7 +14,7 @@ class Pessoa:
         return len(nome) >= 3 and ' ' not in nome
 
 
-p1 = Pessoa('João', 'da Silva', 20)  # Cria objeto com nome valido chamando através de um objeto do tipo Pessoa
+p1 = Pessoa('Jose', 'da Silva', 20)  # Cria objeto com nome valido chamando através de um objeto do tipo Pessoa
 print(p1.valida_nome(p1.nome))
 
 p2 = Pessoa('a', 'da Silva', 20)  # Lança ValueError: Nome inválido é menor ou igual a 3 letras
