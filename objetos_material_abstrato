@@ -1,0 +1,234 @@
+#Classifique dois objetos materiais e dois abstratos. Insira, no mínimo, três métodos e três atributos para cada.
+
+OBJETO ABSTRATO 1:
+
+Classe pai = Conta
+	Atributos = Nome, Cpf, Saldo, Emprestimo
+	Metodo = getJuros
+	Metodo = imprimeExtrato
+Classe filha = ContaPoupança
+	Metodo = deduzEmpestimo
+	Metodo = getJuros
+	Metodo = imprimeExtrato():
+ 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public abstract class Conta {
+        protected String nome;
+        protected String cpf;
+        protected double saldo;
+	protected double emprestinoMes;
+        public double getJuros() {
+            return this.saldo * 1.008;
+        }
+	public void imprimeExtrato() {
+		System.out.println("### Extrato da Conta Corrente OURO ###");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/aaaa HH:mm:ss");
+		Date date = new Date();
+		System.out.println("Saldo: "+this.getSaldo());
+		System.out.println("Data: "+sdf.format(date));
+	}
+
+
+}
+
+public class ContaPoupanca extends Conta {
+	@Override
+        public double deduzEmprestimo() {
+            return this.saldo = (saldo - emprestimoMes);
+        }
+        public double getJuros() {
+            return this.saldo * 1.0002;
+        }
+	public void imprimeExtrato() {
+		System.out.println("### Extrato da Conta Poupança ###");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/aaaa HH:mm:ss");
+		Date date = new Date();
+		System.out.println("Saldo: "+this.getSaldo());
+		System.out.println("Data: "+sdf.format(date));
+	}
+}}
+
+____________
+
+OBJETO ABSTRATO 2:
+
+Classe pai = Tela
+	Atributos = titulo, kilometragem 
+	Metodo = setTitulo
+	Metodo = obterInformacao
+
+Classe filha = TelaKilometragem
+	Metodo = TelaKilometragem
+	Metodo = obterInformacao
+	Metodo = imprimir
+
+
+public abstract class Tela {
+  private String titulo;
+
+  public void setTitulo(String titulo) {
+    this.titulo = titulo;
+  }
+  public abstract String obterInformacao();
+  public void imprimir() {
+    System.out.println(this.titulo);
+    System.out.println("\t" + obterInformacao());
+  }
+}
+/*
+ * Tela filha que mostra a kilometragem percorrida por um veiculo.
+ */
+public class TelaKilometragem extends Tela {
+  /* Atributo que guarda o valor da km atual do veiculo. */
+  int km = 0;
+
+  /**
+   * Construtor que iniciliza o titulo da tela.
+   */
+  public TelaKilometragem() {
+    /* Atribui o valor do titulo desta tela. */
+    super.setTitulo("Km Atual");
+  }
+
+  /**
+   * Implementa o método abstrato da classe Tela,
+   * neste método buscamos a km atual do veiculo.
+   * 
+   * @return Texto com a km atual.
+   */
+  @Override
+  public String obterInformacao() {
+    km += 10;
+    return String.valueOf(km) + " km";
+  }
+}
+
+/*
+ * Classe utilizada para testar a Tela Kilometragem.
+ */
+public class TesteTelaKm {
+  public static void main(String[] args) {
+    TelaKilometragem tk = new TelaKilometragem();
+    tk.imprimir();
+
+    System.out.println("\n------------\n");
+
+    tk.imprimir();
+  }
+}
+__________________
+
+OBJETO MATERIAL 1:
+
+Classe = Professor
+	Atributos = nome, matricula, cargaHoraria, salarioHora
+	Metodo = setNome
+	Metodo = getNome
+	Metodo = setMatricula
+	Metodo = getMatricula
+
+public class Professor
+{
+private String nome;
+private int matricula;
+private int cargaHoraria;
+private double salarioHora;
+
+public void setNome(String n) {
+	nome = n;
+	}
+public String getNome() {
+	return nome;
+	}
+public void setMatricula(int m) {
+	matricula = n;
+	}
+public int getMatricula() {
+	return matricula;
+	}
+public void setCargaHoraria(int c) {
+	cargaHoraria = c;
+	}
+public int getCargaHoraria() {
+	return cargaHoraria;
+	}
+public void setSalarioHora(double s) {
+	salarioHora = s;
+	}
+public double getSalarioHora() {
+	return salarioHora;
+}
+public double getSalario() {
+	return salarioHora * cargaHoraria;
+	}
+}
+_______________________________
+
+
+OBJETO MATERIAL 2:
+
+Classe = RegistraAluno
+	Atributos = nome, endereco, idade, notaMatematica, notaPortugues, nota Matematica, notaGeografia
+	Metodo = setNome E DE TODOS OS OUTROS ATRIBUTOS
+	Metodo = getNome E DE TODOS OS OUTROS ATRIBUTOS
+	Metodo = setContadorEstudante
+
+ public class RegistraAluno {
+
+     private String nome;
+     private String endereco;
+     private int idade;
+     private Double notaMatematica;
+     private Double notaPortugues;
+     private Double notaGeografia;
+
+     private static int contadorEstudante;
+
+ public String getNome() {
+	 return nome;
+ 	 }
+ public void setNome(String nome) {
+	 this.nome = nome;
+	 }
+ public String getEndereco() {
+	 return endereco;
+	 }
+ public void setEndereco(String endereco) {
+	 this.endereco = endereco;
+	 }
+ public int getIdade() {
+	 return idade;
+	 }
+ public void setIdade(int idade) {
+	 this.idade = idade;
+	 }
+ public Double getNotaMatematica() {
+ 	return notaMatematica;
+	}
+ public void setNotaMatematica(Double notaMatematica) {
+ 	this.notaMatematica = notaMatematica;
+	}
+ public Double getNotaPortugues() {
+	return notaPortugues;
+ 	}
+ public void setNotaPortugues(Double notaPortugues) {
+ 	this.notaPortugues = notaPortugues;
+ 	}
+ public Double getNotaGeografia() {
+ 	return notaGeografia;
+ 	}
+
+ public void setNotaGeografia(Double notaGeografia) {
+ 	this.notaGeografia = notaGeografia;
+ 	}
+
+ public static int getContadorEstudante() {
+ 	return contadorEstudante;
+ 	}
+
+ public static void setContadorEstudante(int contadorEstudante) {
+ 	RegistraAluno.contadorEstudante = contadorEstudante;
+ 	}
+ }
