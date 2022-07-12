@@ -1,0 +1,21 @@
+import java.io.*;
+ class Cat implements Serializable{} //1
+class SerializeCat{
+     public static void main(String args[]){
+   Cat c = new Cat(); //criando o objeto
+    //serializando o objeto da class cat
+  try{
+FileOutputStream fo = new FileOutputStream("test.ser");
+ObjectOutputStream oo = new ObjectOutputStream(fo);
+   oo.writeObject(c); // serializando o objeto cat
+    oo.close();
+System.out.println("Class Cat - object serializado com sucesso");  }
+  catch(Exception e){e.printStackTrace();}         
+ //des-serializo o objeto
+ try{
+    FileInputStream fi = new FileInputStream("test.ser");
+    ObjectInputStream oi = new ObjectInputStream(fi);
+    c =(Cat) oi.readObject();
+    oi.close();
+System.out.println("agora ele foi desserializado com sucesso");
+ }catch(Exception e){e.printStackTrace();}          }}
