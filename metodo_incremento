@@ -1,0 +1,24 @@
+class Pessoa:
+    pessoaTotal = 0
+    def __init__(self, nome, sobrenome, idade):
+        if not self.valida_nome(nome):
+            raise ValueError('Nome inválido')
+
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.idade = idade
+
+    @staticmethod
+    def valida_nome(nome):
+	Pessoa.pessoaTotal += 1
+        return len(nome) >= 3 and ' ' not in nome
+
+
+p1 = Pessoa('João', 'da Silva', 20)  # Cria objeto com nome valido chamando através de um objeto do tipo Pessoa
+print(p1.valida_nome(p1.nome))
+
+p2 = Pessoa('a', 'da Silva', 20)  # Lança ValueError: Nome inválido é menor ou igual a 3 letras
+print(p2.valida_nome(p2.nome)
+
+p3 = Pessoa(" ", "da Silva", 54)  # Lança ValueError: Nome inválido está em branco
+print(p3.valida_nome(p3.nome)
