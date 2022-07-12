@@ -19,5 +19,5 @@ if __name__ == "__main__":
     pessoa1 = Pessoa("Jose", "M")
     print(pessoa1.nome)
 else:
-    pessoa2 = Pessoa("Maria", "F")
+    pessoa2 = Pessoa("Luiza", "F")
     print(pessoa2.nome)
