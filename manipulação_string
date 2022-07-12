@@ -1,0 +1,24 @@
+var
+c : caracter
+inicio
+c <- "Edmar Brasil"
+escreval(maiusc(c)) // será escrito "EDMAR BRASIL" na tela
+fimalgoritmo
+
+
+# (2) Funcao minusc(x=caractere) Converte toda a string para minuscula
+var
+c : caracter
+inicio
+c <- "Edmar Brasil"
+escreval(minusc(c)) // será escrito "edmar brasil" na tela
+fimalgoritmo
+
+# (3) Funcao Pos (subc, c : caracter) : Retorna um inteiro que indica a posição em que a cadeia subc se encontra em 
+#			    c, ou zero se subc não estiver contida em c. 
+var
+b : caracter
+inicio
+b <- "O meu nome eh Edmar Brasil"
+escreval(pos(c,B)) // será escrito 203 na tela
+fimalgoritmo
