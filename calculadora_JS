@@ -1,0 +1,7 @@
+
+var numero1 = Number(prompt("digite um numero"));
+var numero2 = Number (prompt("digite outro numero"));
+
+resultado = window.alert(numero1 + numero2)
+
+//operador +(soma)
