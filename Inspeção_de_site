@@ -1,0 +1,16 @@
+//site pagina incial do instagram
+
+<body>
+
+(function(){
+
+  function normalizeError(err) {
+    var errorInfo = err.error || {};
+    var getConfigProp = function(propName, defaultValueIfNotTruthy) {
+      var propValue = window._sharedData && window._sharedData[propName];
+      return propValue ? propValue : defaultValueIfNotTruthy;
+    }
+    
+</body>
+
+função declarada em Java Script com a finalidade reportar um erro.
