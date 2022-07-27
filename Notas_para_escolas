@@ -1,0 +1,24 @@
+
+nota1 = prompt("Qual a primeira nota? ");
+
+nota2 = prompt("Qual a segunda nota? ");
+
+nota3 = prompt("Qual a terceira nota? ");
+
+media = ((nota1+nota2+nota3)/2);
+
+resultado = (media>=7) ? "APROVADO" : "REPROVADO";
+
+window.alert(resultado);
+
+Codigo2
+
+nota1 = prompt("Digite a Primeira Nota: ");
+
+nota2 = prompt("Digite a Segunda Nota: ");
+
+somaduas = nota1+nota2;
+
+nota3 = 21-somaduas;
+
+document.write("Você precisa " + nota3 + " para ficar com a media necessaria."
