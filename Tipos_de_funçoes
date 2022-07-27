@@ -1,0 +1,16 @@
+function teste(){
+
+document.write("olá, mundo!");
+
+}
+
+teste();
+
+var nome = "olá"
+var nome2 = "mundo"
+
+function teste2(nome,  nome2){
+
+console.log(teste2);
+
+}
