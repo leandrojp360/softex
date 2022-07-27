@@ -1,0 +1,41 @@
+Características de um padrão de projeto.
+
+Embora um padrão seja a descrição de um problema, de uma solução genérica e sua justificativa, 
+isso não significa que qualquer solução conhecida para um problema possa constituir um padrão, 
+pois existem características obrigatórias que devem ser atendidas pelos padrões: 
+
+1. Devem possuir um nome, que descreva o problema, as soluções e consequências.
+Um nome permiti definir o vocabulário a ser utilizado pelos projetistas e desenvolvedores em um nível mais alto de abstração.
+
+2. Todo padrão deve relatar de maneira clara a qual (is)problema(s) ele deve ser aplicado, ou seja, 
+quais são os problemas que quando inserido em um determinado contexto o padrão conseguirá resolvê-lo. Alguns podendo exigir pré-condições.
+
+3. Solução descreve os elementos que compõem o projeto, seus relacionamentos, responsabilidades e colaborações. 
+Um padrão deve ser uma solução concreta, ele deve ser exprimido em forma de gabarito (algoritmo) que, no entanto, pode ser aplicado de maneiras diferentes.
+
+4. Todo padrão deve relatar quais são as suas consequências para que possa ser analisada a solução alternativa de projetos e 
+para a compreensão dos benefícios da aplicação do projeto.
+
+Padrão escolhido:
+
+Abstract Factory
+
+A intenção deste é fornecer uma interface para criação de famílias de objetos relacionados ou 
+dependentes sem especificar suas classes concretas. Também é conhecido como Kit.
+Este padrão deve ser aplicado quando se deseja isolar a aplicação da implementação da classe concreta, 
+que poderia ser um componente e ou framework específico no qual a aplicação conheceria apenas uma interface e a implementação concreta seria 
+conhecida apenas em tempo de execução ou compilação.
+
+Imagine que em uma aplicação houvesse a necessidade de que ela fosse implementada para oferecer suporte a plataformas e características distintas. 
+Por exemplo: Uma visão desktop e uma móvel (celular Pocket PC). A maneira de constituí-la, seria definindo uma família de componentes para cada plataforma e uma fábrica que os
+instancia de acordo com a plataforma alvo na qual a aplicação será executada.De acordo com o exposto pelos quatro amigos, o uso do padrão Abstract Factory deve estar restrito as seguintes situações:
+
+Um sistema deve ser independente de como seus produtos são criados, compostos ou representados;
+Um sistema deve ser configurado como um produto de uma família de múltiplos produtos;
+Uma família de objetos for projetada para ser usada em conjunto, e você necessita garantir esta restrição;
+Você quer fornecer uma biblioteca de classes de produtos e quer revelar somente suas interfaces, não suas implementações.
+
+
+
+Referencia: Devmedia.com
+livro.pdf padroes de projetos/2008.
