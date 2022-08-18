@@ -1,0 +1,6 @@
+app.get('/projects'.(request,response)=>{
+return response.json([
+"projeto1",
+"projeto2",
+])
+});
