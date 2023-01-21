@@ -1,0 +1,29 @@
+Forma Normal
+
+Pode-se dizer que uma tabela se encontra na Primeira Forma Normal se:
+
+Possui chave primária;
+Não possui grupos repetitivos;
+Todos os seus atributos são atômicos, ou seja, não precisa ser decomposto.
+
+Forma Normal
+
+Pode-se dizer que uma tabela se encontra na Segunda Forma Normal se:
+
+Está na primeira forma normal;
+Não possui dependências parciais da chave primária;
+
+Forma Normal
+
+Pode-se dizer que uma tabela se encontra na Terceira Forma Normal se:
+
+Está na segunda forma normal;
+Se nenhum dos campos foram determinados transitivamente pela chave primária.
+
+FNBC
+
+Pode-se dizer que uma tabela se encontra na FNBC se:
+
+Está na terceira forma normal;
+Não há superposição
+Na tabela não contém duas ou mais chaves candidatas.
