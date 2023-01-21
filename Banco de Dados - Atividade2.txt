@@ -1,0 +1,36 @@
+1 – Análise de requisitos
+O primeiro passo para a criação do modelo correto é entender a necessidade. A isso chamamos de Análise de Requisitos.
+É preciso, primeiramente, levantar os requisitos que darão a ideia inicial do sistema. Nessa fase — que é considerada a mais importante do processo —, procura-se entender a regra de negócio estabelecida, por meio da qual será desenhado o que chamamos de minimundo. Esse termo procura descrever o universo de relações de negócios que serão atendidas pelo modelo a ser implementado.
+Na análise de requisitos, atividades como entrevistas e reuniões para discutir os processos que serão controlados pelo sistema são de suma importância para que o desenho do modelo seja o mais fiel possível à realidade e atenda de forma satisfatória à expectativa do interessado.
+Pode-se dizer, sem medo, que o sucesso das próximas fases dependerá do entendimento claro da necessidade do cliente.
+
+2 – Modelo conceitual
+A seguir há o Modelo Conceitual. Nessa etapa as informações obtidas no passo anterior servem como entrada para geração do desenho conceitual. Costuma-se utilizar o recurso chamado modelo entidade-relacionamento, em que se define os agentes que farão parte das rotinas e os relacionamentos entre esses agentes.
+Por exemplo, há uma entidade chamada “cliente” e outra chamada “carro”. O relacionamento que é estabelecido entre essas duas entidades provavelmente será chamado de “compra”. Assim, no desenho conceitual, tem-se que “o cliente compra o carro”.
+Nesse momento, também se estabelece a cardinalidade entre as entidades, ou seja, usando o exemplo citado, definem-se as regras, como:
+
+Se um cliente compra um ou vários carros;
+Se um carro pode ser comprado por um ou vários clientes.
+Nesse ponto, já se inicia a materialização das regras de negócios discutidas na primeira etapa. Se fosse uma locadora de automóveis, um carro poderia ser alugado por um ou mais clientes (claro, apenas por um de cada vez).
+Já no caso da loja, o carro só pode ser vendido uma vez para um cliente. A não ser que seja uma loja de carros usados ou seminovos: nesse caso, existe a possibilidade de o cliente voltar algum tempo depois e trocar o carro por outro mais novo. Tudo isso é definido na análise de requisitos.
+
+3 – Modelo lógico
+Nessa etapa, são definidos os aspectos físicos do projeto de banco de dados. Cada entidade tende a se tornar uma tabela, que armazenará informações. Nessa fase é hora de definir os tipos de dados e tamanho dos campos que vão armazenar as informações. Por exemplo:
+
+RG e CPF pedem dados do tipo numérico;
+Nomes, endereços e informações que contenham tanto letras como números são dados do tipo caractere.
+Também será determinado o tamanho dos campos. Essa fase é preponderante para o sucesso do modelo, pois um dimensionamento errado vai redundar em retrabalho para correção futura.
+Geralmente, o custo maior em desenvolvimento de sistemas é exatamente para correção e ajustes posteriores à entrega do projeto. Por isso, essa fase é fundamental para o sucesso de um projeto de banco de dados.
+
+4 – Modelo físico
+Aqui, chega a última, mas não menos importante fase do desenho. Nesse momento já existe uma ideia bastante precisa de banco de dados. Nessa fase é que os detalhes físicos são definidos: armazenamento dos dados, geração dos scripts que irão criar as tabelas e visões do banco.
+Essa fase também marca um importante detalhe: todas as fases anteriores foram executadas independente da plataforma de software de banco de dados que seria usada. Agora, cada ação está diretamente ligada à solução de SGDB (Sistema Gerenciador de Banco de Dados). Para cada produto existente no mercado, há as melhores práticas e recomendações dos especialistas em administração de bancos de dados, também chamados DBAs.
+
+A sintaxe dos scripts
+Aqui, se define a sintaxe dos scripts para o produto específico: Oracle, SQL Server, MySQL ou PostgreSQL, por exemplo. Cada um tem suas especificações de instalação e melhores práticas, bem como plataformas onde serão executados.
+Por exemplo, o Oracle pode ser usado em vários sistemas operacionais, como Windows, Linux e Solaris. Já o SQL Server é instalado no sistema operacional do seu fabricante, a Microsoft. Esses detalhes são discutidos nessa fase, levando-se em conta aspectos técnicos e orçamentários, como aquisição de licenças e especialistas no produto para suporte.
+
+As regras de segurança
+Nessa fase também se aplicam as regras de segurança: quem terá acesso a qual informação no banco de dados, bem como rotinas de backup e restauração. Soluções de administração do banco de dados, replicação ou redundância também podem ser definidos aqui.
+Dessa forma, percebemos duas peculiaridades no projeto de banco de dados:
+
