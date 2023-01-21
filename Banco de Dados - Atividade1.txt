@@ -1,0 +1,21 @@
+1. DADOS:
+Em resumo, dados são valores atribuídos a algo. Estes valores não precisam ser necessariamente números. Eles também podem ser, por exemplo, conceitos ou posições em um mapa. Dados podem ser medidos ou mensurados por meio de instrumentos, mas também podem ser atribuídos de forma arbitrária.
+
+2. BANCO DE DADOS:
+Um banco de dados é uma coleção organizada de informações - ou dados - estruturadas, normalmente armazenadas eletronicamente em um sistema de computador. Um banco de dados é geralmente controlado por um sistema de gerenciamento de banco de dados (DBMS).
+
+3. MODELOS DE DADOS:
+Conceituais:
+Essa abordagem é uma descrição de alto nível de um design de banco de dados que mostra como os dados se relacionam e que tipo de dados podem ser armazenados no banco de dados. O público-alvo da modelagem de dados conceituais é o lado comercial de uma organização. Afinal, o modelo de dados conceituais define a estrutura de dados que o negócio requer. Então, depois que o modelo de dados conceituais é criado, ele pode ser refinado e transferido para um modelo de dados lógico.
+
+Lógicos:
+Esses modelos criam a estrutura do banco de dados e descrever os dados de uma perspectiva técnica. O lado técnico de uma organização usa modelos de dados lógicos como representações detalhadas de designs de banco de dados. Portanto, este modelo de dados serve como base para a criação de um modelo de dados físico.
+
+Físicos:
+Este modelo de dados é específico para o aplicativo e banco de dados a serem implementados. Portanto, ele é usado para criar as tabelas e campos que armazenam dados do banco de dados. Um modelo de dados físicos descreve um design de banco de dados para um sistema de gerenciamento de banco de dados específico (DBMS). Os lados técnico e comercial de uma organização usam esse tipo de modelo.
+
+4. METADADOS:
+Metadados são informações que acrescem aos dados e que têm como objetivo informar-nos sobre eles para tornar mais fácil a sua organização. Um item de um metadado pode informar do que se trata aquele dado numa linguagem inteligível para um computador. Os metadados tem a função de facilitar o entendimento dos relacionamentos e evidenciar a utilidade das informações dos dados.
+
+5. CATALOGO DE DADOS: 
+É um inventário organizado de ativos de dados na organização. Ele usa metadados para ajudar as organizações a gerenciarem seus dados. Também ajuda os profissionais de dados a coletar, organizar, acessar e enriquecer metadados para oferecer suporte à descoberta e governança de dados.
