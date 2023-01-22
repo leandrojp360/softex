@@ -1,0 +1,16 @@
+ //três tipos de métodos para melhorar senhas
+ 
+ 1. DES 
+ Data Encryption Standard (DES) é uma das primeiras criptografias utilizadas e é considerada uma proteção básica de poucos bits (cerca de 56). 
+ O seu algoritmo é o mais difundido mundialmente e realiza 16 ciclos de codificação para proteger uma informação. A complexidade e o tamanho das chaves de criptografia são medidos em bits. Quando uma criptografia é feita com 128 bits, significa que 2128 é o número de chaves possíveis para decifrá-la. 
+ Atualmente, essa quantidade de bits é considerada segura, mas quanto maior o número, mais elevada será a segurança.
+ 
+ 2. DESX
+Essa é outra variante do DES e trata-se de uma solução bastante simples do algoritmo, mas que aumenta exponencialmente a resistência contra ataques de força bruta sem elevar a sua complexidade computacional.
+Basicamente, adicionam-se 64 bits antes da encriptação, o que aumenta a proteção de 120 bits contra força bruta. Atualmente,
+essa tecnologia não é mais imune contra ataques mais sofisticados, como criptoanálises (o programa evolui a cada tentativa de decifração).
+
+3. AES
+Advanced Encryption Standard (AES) — ou Padrão de Criptografia Avançada, em português — é o algoritmo padrão do governo dos Estados Unidos e de várias outras organizações. 
+Ele é confiável e excepcionalmente eficiente na sua forma em 128 bits, mas também é possível usar chaves e 192 e 256 bits para informações que precisam de proteção maior.
+O AES é amplamente considerado imune a todos os ataques, exceto aos ataques de força bruta, que tentam decifrar o código em todas as combinações possíveis em 128, 192 e 256 bits, o que é imensamente difícil na atualidade.
