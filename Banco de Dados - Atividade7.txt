@@ -1,0 +1,20 @@
+
+select start.nome, cursos.nome
+from start join cursos
+on cursos.idcurso = start.cursopreferido
+order by start.nome;
+
+select start.nome, cursos.nome
+from start left join cursos
+on cursos.idcurso = start.cursopreferido;
+
+select start.nome, cursos.nome
+from start right join cursos
+on cursos.idcurso = start.cursopreferido;
+
+select start.nome, cursos.nome from start
+join start_assiste_curso
+on start.id = start_assiste_curso.idstart
+join cursos
+on cursos.idcurso = start_assiste_curso.idcurso
+order by start.nome;
