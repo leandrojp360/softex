@@ -1,0 +1,95 @@
+**TABELA**
+ALUNO
+
+P_NOME      U_NOME      MATRÍCULA   SÉRIE       DISCIPLINA      NOTA
+Maria        Silva         0001     1º ano      Português       7,0
+Mateus       Santos        0002     3º ano      Matemática      7,0
+Pedro        Silva         0003     2º ano      Arte            9,5
+Vanessa      Santos        0004     3º ano      Geografia       7,0 
+Marilia      Gama          0005     1º ano      História        8,0  
+
+**RESPOSTAS**
+
+1-  σNOTA >= 7,0(ALUNO)
+    SELECT * FROM ALUNO WHERE NOTA > 7.0
+
+        ALUNO
+        P_NOME      U_NOME      MATRÍCULA   SÉRIE       DISCIPLINA      NOTA
+        Maria       Silva          0001     1° ano      Português       7,0
+        Mateus      Santos         0002     3° ano      Matemática      7,0
+        Pedro       Silva          0003     2º ano      Arte            9,5
+        Vanessa     Santos         0004     3º ano      Geografia       7,0 
+        Marilia     Gama           0005     1º ano      História        8,0 
+
+2)  σSÉRIE = "1º ano" ^ NOTA >= 8,0 (ALUNO)
+    SELECT * FROM ALUNO WHERE NOTA >= 8.0 AND SÉRIE = "1º ano"
+
+        ALUNO
+        P_NOME      U_NOME      MATRÍCULA   SÉRIE       DISCIPLINA      NOTA
+        Mateus      Santos       0002       3º ano      Matemática      7,0
+        Vanessa     Santos       0004       3º ano      Geografica      7,0
+
+3)  πP_NOME, NOTA (ALUNO)
+    SELECT P_NOME, U_NOME, NOTA FROM ALUNO
+
+        ALUNO       
+        P_NOME      U_NOME      NOTA
+        Maria       Silva        7,0
+        Mateus      Santos       7,0
+        Pedro       Silva        9,5
+        Vanessa     Santos       7,0
+
+4)  CREATE TABLE PROFESSOR (
+    P_NOME varchar(15),
+    U_NOME varchar(15)
+    );
+
+        PROFESSOR
+        P_NOME      U_NOME
+        Augusto	    Lima
+        Janete	    Silva
+        Joel        Freitas
+        Luana       Santos
+
+5)  CREATE TABLE ALUNO (
+    P_NOME varchar(15),
+    U_NOME varchar(15)
+    );
+
+        ALUNO
+        P_NOME      U_NOME
+        Luiza	      Fernandes
+        Geane	      Soares
+        Leandro	    Couto
+        André       Silva
+
+6)  SELECT * FROM ALUNO
+    UNION
+    SELECT * FROM PROFESSOR;
+
+        ALUNO UNION PROFESSOR
+        P_NOME      U_NOME
+        Augusto	    Lima
+        Janete	    Silva
+        Joel        Freitas
+        Luana       Santos
+        Luiza	      Fernandes
+        Leandro     Couto
+        André       Silva
+
+7)  SELECT * FROM ALUNO
+    INTERSECT
+    SELECT * FROM PROFESSOR;
+        ALUNO INTERSECT PROFESSOR
+        P_NOME      U_NOME
+        Joel        Freitas
+
+8)  SELECT * FROM ALUNO
+    EXCEPT
+    SELECT * FROM PROFESSOR
+
+        ALUNO EXCEPT PROFESSOR
+        P_NOME      U_NOME
+        Geane	      Soares
+        Leandro	    Couto
+        André	      Silva
