@@ -14,3 +14,5 @@ package.json, que é onde ficará toda a configuração do projeto, incluindo, n
 Após informar todos os dados o programa apresenta no console o conteúdo do arquivo package.json que será criado com as informações que passadas.
 ara confirmar a criação do arquivo basta responder com o comando "yes" ou "y". Feito isso, o arquivo package.json é criado na pasta raiz do seu projeto. 
 Em seguida cria-se o primeiro arquivo JavaScript do projeto, que é justamente o arquivo configurado no package.json. Que por padrão, o arquivo é o index.js.
+
+*/
