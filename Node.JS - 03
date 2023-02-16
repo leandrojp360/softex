@@ -1,0 +1,32 @@
+const express = require('express');
+const app = express();
+
+app.engine('html', require('ejs').renderFile);
+
+app.get('/init', (req, res) => {
+    res.send('Funcionando!')
+});
+
+app.get('/iniciar', (req, res) => {
+    res.status(404).send('Caminho não encontrado!');
+
+    app.get('/paginas/login', function(req, res) {
+        res.append('content-Type', 'aplication/javascript; charset-UTF-8');
+        res.append('conection', 'keep-alive');
+        res.append('Set-Cookie', 'divehours-fornightly');
+        res.append('content-Length', '123456');
+        res.append('Login realizado');
+    });
+});
+
+app.get('/login', (req, res) => {
+    res.redirect('/paginas/login')
+});
+
+app.get('/jogar', (req, res) => {
+    res.render(__dirname + '/index.html')
+});
+
+app.listen(8080, () => {
+    console.log('Servidor rodando na porta 8080')
+});
