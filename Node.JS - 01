@@ -1,0 +1,16 @@
+/*Clientes e servidores
+Computadores conectados à web são chamados clientes e servidores. Um diagrama simplificado de como eles interagem pode ter essa aparência:
+Clientes são os típicos dispositivos conectados à internet dos usuários da web (por exemplo, seu computador conectado ao seu Wi-Fi ou seu telefone conectado à sua rede móvel) e programas de acesso à Web disponíveis nesses dispositivos (geralmente um navegador como Firefox ou Chrome).
+Servidores são computadores que armazenam páginas, sites ou aplicativos. Quando o dispositivo de um cliente quer acessar uma página.
+Uma cópia dela é baixada do servidor para a máquina do cliente para ser apresentada no navegador web do usuário.
+O cliente e o servidor que descrevemos acima não contam toda a história. Existem muitas outras partes envolvidas, e vamos descrevê-las abaixo.
+Por enquanto, vamos imaginar que a web é uma estrada. Em um extremo da estrada, temos o cliente, que é como sua casa. No extremo oposto, temos o servidor, que é como uma loja onde você quer comprar algo.
+
+Criando um projeto em NodeJS
+
+Primeiro criamos o repositório onde ficará o projeto. No terminal digitamos o comando: mkdir nome_da_pasta; depois migramos para a pasta
+do projeto com o comando: cd nome_da_pasta; dentro da pasta do projeto digitamos o comando: npm init. Este comando vai criar o arquivo
+package.json, que é onde ficará toda a configuração do projeto, incluindo, nome, versão, descrição, scripts a serem executados, licença, etc.
+Após informar todos os dados o programa apresenta no console o conteúdo do arquivo package.json que será criado com as informações que passadas.
+ara confirmar a criação do arquivo basta responder com o comando "yes" ou "y". Feito isso, o arquivo package.json é criado na pasta raiz do seu projeto. 
+Em seguida cria-se o primeiro arquivo JavaScript do projeto, que é justamente o arquivo configurado no package.json. Que por padrão, o arquivo é o index.js.
