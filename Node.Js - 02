@@ -6,3 +6,4 @@ Depois criamos o servidor com o próprio método da dependência HTTP, usando "c
 Essa mensagem será a resposta do servidor para qualquer requisição feita para esse projeto do jeito que está.
 Para ligar o servidor, precisamos usar "server.listen(port, hostname, () => { console.log('Servidor rodando!'); });".
 Com o código pronto, voltamos ao terminal e digitamos "node index.js". Isso executará o servidor e aparecerá a mensagem "Servidor rodando!" no terminal. Já no browser aparecerá a mensagem "Hello, World!".
+*/
