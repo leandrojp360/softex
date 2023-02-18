@@ -1,0 +1,8 @@
+/* as seis regras de uma API REST.
+1. Interface uniforme
+2. Separação cliente-servidor
+3. Ausência de estado
+4. Capacidade de cache
+5. Arquitetura de sistema por camadas
+6. Código a pedido
+*/
